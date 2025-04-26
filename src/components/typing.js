@@ -11,6 +11,7 @@ const TypingTester = () => {
     const [timeLeft, setTimeLeft] = useState(maxTime)
     const [mistakes, setMistakes] = useState(0)
     const [charIndex, setCharIndex] = useState(0)
+    const [isTyping, setIsTyping] = useState(false)
     const [WPM, setWPM] = useState(0)
     const [CPM, setCPM] = useState(0)
     const inputRef = useRef()
