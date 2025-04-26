@@ -9,7 +9,7 @@ const TypingTester = () => {
 
     const maxTime =  60
     const [timeLeft, setTimeLeft] = useState(maxTime)
-    const [ mistakes, setMistakes] = useState(0)
+    const [mistakes, setMistakes] = useState(0)
     const [WPM, setWPM] = useState(0)
     const [CPM, setCPM] = useState(0)
 
@@ -17,6 +17,7 @@ const TypingTester = () => {
     return(
         <div className='main-div'>
             <div className='test'>
+                <input type='text' className='input-field'
             {
                 paragraph.split("").map((char, index) => (
                     <span key={index} className='char'> 
@@ -27,10 +28,10 @@ const TypingTester = () => {
 
             </div>
             <div className='result'>
-                <p>Time Left</p>
-                <p>Mistakes</p>
-                <p>WPM</p>
-                <p>CPM</p>
+                <p>Time Left: <strong>{timeLeft}</strong></p>
+                <p>Mistakes: <strong>{mistakes}</strong></p>
+                <p>WPM: <strong>{WPM}</strong></p>
+                <p>CPM: <strong>{CPM}</strong></p>
                 <button>Try Again</button>
             </div>
         </div>
