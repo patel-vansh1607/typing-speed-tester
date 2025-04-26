@@ -1,3 +1,4 @@
+import { use, useState } from 'react'
 import '../styles/typing.css'
 
 
@@ -5,6 +6,12 @@ const paragraph = `The golden sun dipped behind the hills, casting a warm glow a
 
 const TypingTester = () => {
 
+
+    const maxTime =  60
+    const [timeLeft, setTimeLeft] = useState(maxTime)
+    const [ mistakes, setMistakes] = useState(0)
+    const [WPM, setWPM] = useState(0)
+    const [CPM, setCPM] = useState(0)
 
 
     return(
