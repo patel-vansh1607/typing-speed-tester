@@ -2,8 +2,11 @@ import '../styles/typing.css'
 
 const TypingTester = () => {
     return(
-        <div>
-            <div>
+        <div className='main-div'>
+            <div className='test'>
+
+            </div>
+            <div className='result'>
 
             </div>
         </div>
