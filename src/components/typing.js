@@ -31,7 +31,11 @@ const TypingTester = () => {
             }
              if(typedChar === currentChar.textContent){
                 setCharIndex(charIndex + 1)
+             } else {
+                setCharIndex(charIndex + 1)
+                setMistakes(mistakes + 1)
              }
+             if (charIndex === characters.length -1) setIsTyping(false)
         }
     }
     return(
