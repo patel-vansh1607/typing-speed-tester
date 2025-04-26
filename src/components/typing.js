@@ -7,7 +7,11 @@ const TypingTester = () => {
 
             </div>
             <div className='result'>
-
+                <p>Time Left</p>
+                <p>Mistakes</p>
+                <p>WPM</p>
+                <p>CPM</p>
+                <button>Try Again</button>
             </div>
         </div>
     )
