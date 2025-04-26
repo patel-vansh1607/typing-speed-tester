@@ -23,7 +23,16 @@ const TypingTester = () => {
 
     const handleChange = (e) => {
         const characters = charRefs.current
-        const currentChar = charRefs.current[charIndex]
+        let currentChar = charRefs.current[charIndex]
+        let typedChar = e.target.value.slice(-1)
+        if (charIndex < characters.length && timeLeft > 0) {
+            if(!isTyping){
+                setIsTyping(true)
+            }
+             if(typedChar === currentChar.textContent){
+                setCharIndex(charIndex + 1)
+             }
+        }
     }
     return(
         <div className='main-div'>
