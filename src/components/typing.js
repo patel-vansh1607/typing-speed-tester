@@ -1,4 +1,4 @@
-import { use, useState } from 'react'
+import { use, useEffect, useState } from 'react'
 import '../styles/typing.css'
 
 
@@ -14,16 +14,23 @@ const TypingTester = () => {
     const [isTyping, setIsTyping] = useState(false)
     const [WPM, setWPM] = useState(0)
     const [CPM, setCPM] = useState(0)
-    const inputRef = useRef()
+    const inputRef = useRef(null)
+    const charRefs = useRef([])
 
+    useEffect(() =>{
+        inputRef.current.focus()
+    }, [])
 
+    const handleChange = (e) => {
+        const characters = charRefs.current
+    }
     return(
         <div className='main-div'>
             <div className='test'>
-                <input type='text' className='input-field' ref={inputRef}/>
+                <input type='text' className='input-field' ref={inputRef} onChange={handleChange}/>
             {
                 paragraph.split("").map((char, index) => (
-                    <span key={index} className='char'> 
+                    <span key={index} className='char' ref={(e) => charRefs.current[index] = e}> 
                         {char}
                     </span>
                 ))
