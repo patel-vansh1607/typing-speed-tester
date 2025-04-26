@@ -12,12 +12,13 @@ const TypingTester = () => {
     const [mistakes, setMistakes] = useState(0)
     const [WPM, setWPM] = useState(0)
     const [CPM, setCPM] = useState(0)
+    const inputRef = useRef()
 
 
     return(
         <div className='main-div'>
             <div className='test'>
-                <input type='text' className='input-field'
+                <input type='text' className='input-field' ref={inputRef}/>
             {
                 paragraph.split("").map((char, index) => (
                     <span key={index} className='char'> 
