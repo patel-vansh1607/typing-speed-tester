@@ -8,13 +8,14 @@ const TypingTester = () => {
     return(
         <div className='main-div'>
             <div className='test'>
-                {
-                    paragraph.split("").map((char, index) =>{
-                        <span className='char'> 
-                            {char}
-                        </span>
-                    })
-                }
+            {
+                paragraph.split("").map((char, index) => (
+                    <span key={index} className='char'> 
+                        {char}
+                    </span>
+                ))
+            }
+
             </div>
             <div className='result'>
                 <p>Time Left</p>
