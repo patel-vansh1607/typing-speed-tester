@@ -23,6 +23,7 @@ const TypingTester = () => {
 
     const handleChange = (e) => {
         const characters = charRefs.current
+        const currentChar = charRefs.current[charIndex]
     }
     return(
         <div className='main-div'>
